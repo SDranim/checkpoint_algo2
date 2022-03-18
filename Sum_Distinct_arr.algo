@@ -1,0 +1,18 @@
+ALGORITHM SUM_D_ARR
+VAR
+    t1: ARRAY_OF INTEGER[n];
+    t2: ARRAY_OF INTEGER[m];
+     i,j : INTEGER
+    sum:INTEGER:=0;
+BEGIN
+       WHILE (i<n-1 ) DO
+        FOR j FROM 0 TO m-1 STEP 1  DO
+            IF (t1[i]=t2[j) THEN
+                
+                i=i+1;
+            ELSE
+                sum=t1[i]+t2[j]
+                i=i+1;
+            END_IF
+        END_FOR 
+END

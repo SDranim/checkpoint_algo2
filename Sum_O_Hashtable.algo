@@ -1,0 +1,33 @@
+ALGORITHM Sum_O_Hashtable
+VAR
+    i,j :INTEGER;
+    t1 : ARRAY_OF INTEGER[n];
+    t2 : ARRAY_OF INTEGER[m];
+    htab : HASH_TABLE<INTEGER,INTEGER>
+    sum : INTEGER:=0;
+BEGIN
+        FOR i FROM 0 TO n-1 STEP 1  DO
+            IF (htab.lookup(t1[i])) THEN
+                htab.insert(t1[i], 1 + htab.get(t1[i]));
+            ELSE
+                htab.insert(t1[i], 1);
+            END_IF 
+        END_FOR
+        
+        FOR j FROM 0 TO m-1 STEP 1  DO
+            IF (htab.lookup(t2[i])) THEN
+                htab.insert(t2[i], 1 + htab.get(t2[i]));
+            ELSE
+                htab.insert(t2[i], 1);
+            END_IF
+        END_FOR
+        
+        FOR htab.key FROM 0 TO htab.key.length STEP 1  DO
+            IF (htab.value=2) THEN
+                sum+=htab.key;
+            END_IF
+        END_FOR
+        
+
+    
+END
